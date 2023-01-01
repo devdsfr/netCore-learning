@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "5W9Xxi9M4V3viRMsXcWrjJBtm8P17CMN1LMUvyuB73O9FEl0H8aU2Rw8hWXOX56Zffxaj+7Q6RrOlBsuxC5fKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Elite Player\\Documents\\netCore-learning\\PROEVENTOS\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Elite Player\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Elite Player\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Elite Player\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Elite Player\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Elite Player\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Elite Player\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
