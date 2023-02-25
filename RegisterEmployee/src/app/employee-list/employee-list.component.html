@@ -20,7 +20,7 @@
         <td>{{ employee.Position }}</td>
         <td>
           <button (click)="editEmployee(employee.EmployeeID)" class="btn btn-editar btn-sm">Editar</button>
-          <button (click)="deleteEmployee(employee.EmployeeID)" class="btn btn-excluir btn-sm mx-2">Excluir</button>
+          <button (click)="onDeleteEmployee(employee.EmployeeID)" class="btn btn-excluir btn-sm mx-2">Excluir</button>
         </td>
       </tr>
     </tbody>

@@ -28,7 +28,9 @@ export class EmployeeService {
     return this.http.put<Employee>(`${this.baseUrl}/${id}`, employee);
   }
 
-  deleteEmployee(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`);
+  deleteEmployee(id: number): Promise<any> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete(url).toPromise();
   }
+
 }
