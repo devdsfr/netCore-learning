@@ -1,5 +1,5 @@
 export class Employee {
-  EmployeeID: number | undefined;
+  EmployeeID!: number;
   FullName: string | undefined;
   EMPCode: string | undefined;
   Mobile: string | undefined;

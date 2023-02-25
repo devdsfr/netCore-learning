@@ -1,19 +1,29 @@
-<div class="table-container">
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>EMPCode</th>
-      <th>Mobile</th>
-      <th>Position</th>
-
-    </tr>
-    <tr *ngFor="let employee of employees">
-      <td>{{ employee.EmployeeID }}</td>
-      <td>{{ employee.FullName }}</td>
-      <td>{{ employee.EMPCode }}</td>
-      <td>{{ employee.Mobile }}</td>
-      <td>{{ employee.Position }}</td>
-    </tr>
+<div class="container mt-3">
+  <h2 class="mb-4">Lista de Funcionários</h2>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Código do Funcionário</th>
+        <th>Telefone</th>
+        <th>Cargo</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.EmployeeID }}</td>
+        <td>{{ employee.FullName }}</td>
+        <td>{{ employee.EMPCode }}</td>
+        <td>{{ employee.Mobile }}</td>
+        <td>{{ employee.Position }}</td>
+        <td>
+          <a routerLink="/add-employee/{{employee.EmployeeID}}" class="btn btn-editar btn-sm mr-2">Editar</a>
+          <button (click)="deleteEmployee(employee.EmployeeID)" class="btn btn-excluir btn-sm">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
+

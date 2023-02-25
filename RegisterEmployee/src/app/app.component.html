@@ -1,5 +1,11 @@
 <nav>
-  <a routerLink="/employee-list">Listar Funcionários</a>
-  <a routerLink="/add-employee">Adicionar Funcionário</a>
+  <button routerLink="/employee-list" class="nav-button">
+    <i class="fas fa-list"></i>
+    <span>Listar Funcionários</span>
+  </button>
+  <button routerLink="/add-employee" class="nav-button">
+    <i class="fas fa-user-plus"></i>
+    <span>Adicionar Funcionário</span>
+  </button>
 </nav>
 <router-outlet></router-outlet>
