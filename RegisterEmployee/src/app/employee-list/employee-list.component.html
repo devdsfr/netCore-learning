@@ -19,11 +19,10 @@
         <td>{{ employee.Mobile }}</td>
         <td>{{ employee.Position }}</td>
         <td>
-          <a routerLink="/add-employee/{{employee.EmployeeID}}" class="btn btn-editar btn-sm mr-2">Editar</a>
-          <button (click)="deleteEmployee(employee.EmployeeID)" class="btn btn-excluir btn-sm">Excluir</button>
+          <button (click)="editEmployee(employee.EmployeeID)" class="btn btn-editar btn-sm">Editar</button>
+          <button (click)="deleteEmployee(employee.EmployeeID)" class="btn btn-excluir btn-sm mx-2">Excluir</button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-

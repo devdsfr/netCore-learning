@@ -3,6 +3,7 @@ import { EmployeeService } from '../service/employee.service';
 import { Employee } from '../employee/employee';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
@@ -15,7 +16,7 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getEmployees();
-    
+
   }
 
   getEmployees() {
