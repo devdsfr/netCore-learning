@@ -1,3 +1,5 @@
+using System.Runtime.Serialization;
+using System.Net.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,11 +8,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProEventos.API.Data;
 
 namespace ProEventos.API
 {
@@ -27,7 +31,11 @@ namespace ProEventos.API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddDbContext<DataContext>(
+                context => context.UseSqlite(Configuration.GetConnectionString("Default"))
+            );
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.API", Version = "v1" });
@@ -49,6 +57,10 @@ namespace ProEventos.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(x => x.AllowAnyHeader()
+                              .AllowAnyMethod()
+                              .AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {

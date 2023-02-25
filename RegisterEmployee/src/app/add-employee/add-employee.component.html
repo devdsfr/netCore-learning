@@ -1,0 +1,22 @@
+<h2>Adicionar Funcionário</h2>
+
+<form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+  <div class="form-group">
+    <label for="name">Nome:</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="employee.FullName" required>
+  </div>
+  <div class="form-group">
+    <label for="EMPCode">EMPCode:</label>
+    <input type="text" class="form-control" id="EMPCode" name="EMPCode" [(ngModel)]="employee.EMPCode" required>
+  </div>
+  <div class="form-group">
+    <label for="mobile">Mobile:</label>
+    <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="employee.Mobile" required>
+  </div>
+  <div class="form-group">
+    <label for="position">Position:</label>
+    <input type="text" class="form-control" id="position" name="position" [(ngModel)]="employee.Position" required>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid">Adicionar Funcionário</button>
+</form>
+

@@ -1,0 +1,19 @@
+<div class="table-container">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>EMPCode</th>
+      <th>Mobile</th>
+      <th>Position</th>
+
+    </tr>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.EmployeeID }}</td>
+      <td>{{ employee.FullName }}</td>
+      <td>{{ employee.EMPCode }}</td>
+      <td>{{ employee.Mobile }}</td>
+      <td>{{ employee.Position }}</td>
+    </tr>
+  </table>
+</div>
